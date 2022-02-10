@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class OTP
+{
+  public static void main()
+  {
+  Scanner sc = new Scanner(System.in);
+  System.out.println(" Enter a number :");
+  long num = sc.nextLong();
+  long rev=0;
+  for(long i = num;i>0;i/=10)
+  rev = rev*10 + (i%10);
+  System.out.println("the generated otp number of " + num + " is :-" + rev);
+}
+}
