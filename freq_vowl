@@ -1,0 +1,38 @@
+import java.util.*;
+public class Main 
+{
+  public static void main(String[] args)
+  {
+  Scanner sc = new Scanner(System.in);
+  System.out.println(" Enter a string :");
+  String str = sc.nextLine().trim();
+  int c=0;
+ for(int i = 0; i < str.length(); i++)
+ {
+   switch(str.charAt(i))
+   {
+     case'A':
+     case'a':
+     c++; // counter veriable
+     break;
+     case'E':
+     case'e':
+     c++;
+     break;   //is a statement to abrably exist from any loop statement.
+     case'I':
+     case 'i':
+     c++;
+     break;
+     case'O':
+     case'o':
+     c++;
+     break;
+     case'U':
+     case'u':
+     c++;
+     break;
+   }
+ }
+ System.out.println(" The frequency of the string "+ str + " is : - " + c );
+  }
+}
