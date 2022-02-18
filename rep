@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public  class  rep
+{
+    public static void main()
+    {
+        Scanner sc = new Scanner (System.in);
+        System.out.println(" Enter a  string : ");
+        String str = sc.nextLine().trim();
+        System.out.println(" Enter a  string  to replace : ");
+        String str1 = sc.nextLine().trim();
+        System.out.println(" Enter a  string  to replace with: ");
+        String str2 = sc.nextLine().trim();
+        int f = str.indexOf (" ");
+       int p=0,i=0;
+        if(str.substring(0,f).equalsIgnoreCase(str1))
+         str =str2+ str.substring(f);
+        p=f+1;
+            for(i=p;i<=str.lastIndexOf(" ");i++)
+            {
+                if(str.charAt(i)==' ')
+                {
+                if(str.substring(p,i).equalsIgnoreCase(str1))
+                str = str.substring(0,p)+" "+str2 + str.substring(i);
+                 p = i+1;
+            }
+    }
+    int l = str.lastIndexOf(" ");
+    if(str.substring(l+1).equalsIgnoreCase(str1))
+    str=str.substring(0,l)+" " +str2;
+    System.out.println(str);
+}
+}
